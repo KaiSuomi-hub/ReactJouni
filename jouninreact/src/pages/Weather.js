@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Weather({ lat, lng }) {
+export default function Weather()) {
     const [temp, setTemp] = useState(0);
     // const [speed, setSpeed]  = useState(0);
     // const [direction, setDirection]  = useState(0);
@@ -19,7 +19,7 @@ export default function Weather({ lat, lng }) {
             navigator.geolocation.getCurrentPosition((position) => {
                 setPosition(position);
                 const address =
-                    process.env.REACT_APP_URL +
+                    process.env.REACT_APP_API_URL +
                     "lat=" +
                     position.coords.latitude +
                     "&lon=" +
