@@ -4,23 +4,25 @@ nav {
   justify-content: space-between;
 }
 
+nav div {
+  display: inline-block;
+}
+
 nav ul {
   list-style-type: none;
+
 }
 
 nav ul li {
   display: inline-block;
 }
 
-nav div {
+nav ul li a {
   display: inline-block;
-}
-
-nav a {
   padding: 0.5em var(--gutter);
   text-decoration: none;
 }
 
-nav:hover {
-  color: var(--accent-color);
-}/*# sourceMappingURL=Navbar.css.map */
+nav ul li a:hover {
+  color: var(--accent-color)
+}

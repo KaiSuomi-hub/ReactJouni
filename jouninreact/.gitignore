@@ -21,7 +21,7 @@ apikey.js
 # Logs
 logs
 *.log
-
+.env
 # Runtime data
 pids
 *.pid

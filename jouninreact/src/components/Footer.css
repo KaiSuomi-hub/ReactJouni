@@ -3,12 +3,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 40px;
   width: 100%;
   position: fixed;
   bottom: 0;
 }
 
-footer p1 {
-  color: var(--light-color);
-}/*# sourceMappingURL=Footer.css.map */
+footer p {
+  color: var(--light-color)
+}
