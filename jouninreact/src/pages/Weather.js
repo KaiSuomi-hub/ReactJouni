@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Weather()) {
+export default function Weather() {
     const [temp, setTemp] = useState(0);
     // const [speed, setSpeed]  = useState(0);
     // const [direction, setDirection]  = useState(0);
@@ -24,7 +24,7 @@ export default function Weather()) {
                     position.coords.latitude +
                     "&lon=" +
                     position.coords.longitude +
-                    "units=metric" +
+                    "&units=metric" +
                     "&appid=" +
                     process.env.REACT_APP_API_KEY;
                 console.log(address);
