@@ -9,13 +9,15 @@ import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import Weather from "./pages/Weather";
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { createContext, useState } from "react";
 
+export const UserContext = createContext();
+ 
 function App() {
     const [user, setUser] = useState(null);
 
     return (
-        <>
+        <UserContext.Provider value={{user,setUser}}>
             <Header></Header>
             <Navbar />
             <div className="container">
@@ -23,21 +25,21 @@ function App() {
                     <Route
                         path="/"
                         exact
-                        element={<Login setUser={setUser} />}
+                        element={<Login  />}
                     />
                     <Route path="/home" element={<Home />} />
                     <Route path="/weather" element={<Weather />} />
 
-                    <Route path="/about" element={<About user={user} />} />
+                    <Route path="/about" element={<About  />} />
                     <Route
                         path="/logout"
-                        element={<Logout setUser={setUser} />}
+                        element={<Logout  />}
                     />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
             <Footer />
-        </>
+        </UserContext.Provider>
     );
 }
 

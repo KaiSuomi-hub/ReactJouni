@@ -1,8 +1,11 @@
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 import React, { useState } from 'react'
+import { UserContext } from '../App'
+import  { useContext } from 'react'
 
-export default function Login({setUser}) {
+export default function Login() {
+  const {user} = useContext(UserContext)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()

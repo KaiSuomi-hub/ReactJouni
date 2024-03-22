@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import React from 'react'
+import { UserContext } from '../App'
+import  { useContext } from 'react'
 
 export default function Navbar() {
+  const {user} = useContext(UserContext)
   return (
     <nav>
       <div className="left-nav">
