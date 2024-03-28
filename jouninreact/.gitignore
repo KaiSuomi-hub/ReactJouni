@@ -28,7 +28,10 @@ pids
 *.seed
 *.pid.lock
 
+*.tmp
+*.tmp.lock
 
+*.TMP
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
